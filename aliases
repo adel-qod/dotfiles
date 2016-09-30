@@ -1,0 +1,8 @@
+alias bh='fc -l -i 1 | grep'
+alias ls='ls -tr --color=auto'
+alias egrep='egrep --color=auto'
+alias grep='grep --color=auto'
+alias take='tmux detach -a'
+alias gittree='git log --graph --pretty=oneline --abbrev-commit'
+alias btree='git show-branch'
+alias ec='emacsclient -c'
