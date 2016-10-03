@@ -7,7 +7,7 @@ for filename in `ls`; do
   if ! echo $filename | grep -q -E $exceptions; then
     symLinkPath="$HOME"/."$filename"
     cmd="ln -s `pwd`/$filename $symLinkPath"
-    #eval $cmd
+    eval $cmd
     echo $cmd
   fi
 done
