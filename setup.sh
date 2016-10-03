@@ -6,8 +6,8 @@ exceptions="LICENSE|setup.sh"
 for filename in `ls`; do
   if ! echo $filename | grep -q -E $exceptions; then
     symLinkPath="$HOME"/."$filename"
-    cmd="ln -s `pwd`/$filename" $symLinkPath
-    eval $cmd
+    cmd="ln -s `pwd`/$filename $symLinkPath"
+    #eval $cmd
     echo $cmd
   fi
 done
