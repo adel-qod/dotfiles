@@ -50,3 +50,9 @@
       (move-to-column previous-column))))
 ;; Now bind the delete line function to the F2 key
 (global-set-key [f2] (lambda () (interactive) (nuke-line)))
+
+;;; Allow basic mouse functionality.
+(require 'mouse)
+(xterm-mouse-mode t)
+(defun track-mouse (e))
+(setq mouse-sel-mode t)
