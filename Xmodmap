@@ -1,0 +1,18 @@
+! Make alt work as control by assigning the key to the modifier.
+! The following sets the left alt as ctrl while keeping ctrl working.
+! It also sets the left super as Alt.
+! Right side is left unchanged.
+!
+! First, clear the control and set it to both Control and Alt
+clear control
+add control = Control_L Control_R Alt_L Meta_L
+! Second, clear the mod1 (the modifier that does the Meta/Alt job)
+clear mod1
+! Next clear (mod4 is the modifier that does the super job)
+! is needed to stop the behavior of super because Super_L is
+! assigned to it so it'll conflict with me assigning Super_L to mod1.
+clear mod4
+keycode 133 = Super_L
+add mod1 = Alt_R Meta_R Super_L
+! Finally, assign the right super as super function.
+add mod4 = Super_R
